@@ -1,0 +1,12 @@
+{
+	"admin/services/homebox": {
+		"title": "Homebox",
+		"action": {
+			"type": "view",
+			"path": "homebox"
+		},
+		"depends": {
+			"acl": [ "luci-app-homebox" ]
+		}
+	}
+}
