@@ -61,7 +61,9 @@ endif
 
 PKG_SOURCE:=nezha-agent_linux_$(PKG_ARCH_NEZHA-AGENT).zip
 
-PKG_SOURCE_URL:=https://github.com/nezhahq/agent/releases/latest/download/
+PKG_SOURCE_URL:=\
+  https://github.com/nezhahq/agent/releases/latest/download/ \
+  https://xz.haoges.cn/github.com/nezhahq/agent/releases/latest/download/
 
 TAR_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/$(PKG_NAME)-TAR
 
