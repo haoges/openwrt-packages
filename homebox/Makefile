@@ -19,9 +19,6 @@ ifeq ($(ARCH),aarch64)
 else ifeq ($(ARCH),x86_64)
   PKG_ARCH:=amd64
   PKG_HASH:=7ecaf4cf2dc613fef060642bc999acc8b3e8bb93570be83ded1b7f8831eb0184
-else
-  PKG_ARCH:=unsupported
-  PKG_HASH:=skip
 endif
 
 PKG_SOURCE:=homebox-linux-$(PKG_ARCH)-musl.tar.gz
@@ -54,6 +51,16 @@ endef
 define Build/Prepare
 	$(INSTALL_DIR) $(PKG_BUILD_DIR)
 	$(TAR) -zxf $(DL_DIR)/$(PKG_SOURCE) -C $(PKG_BUILD_DIR)
+endef
+
+# ==========================
+# 跳过编译
+# ==========================
+
+define Build/Configure
+endef
+
+define Build/Compile
 endef
 
 # ==========================
